@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="left">
+
+
+{% for y in list %}
+
+
+
+
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">{{y}}
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="/commit/{{y}}">COMMIT</a></li>
+
+	 <li role="presentation"><a role="menuitem" tabindex="-1" href="/logs/{{y}}">LOGS</a></li>
+  <li role="presentation"><a role="menuitem" tabindex="-1" href="/viewf/{{y}}">VIEW FILE</a></li>
+  <li role="presentation"><a role="menuitem" tabindex="-1" href="/push/{{y}}">PUSH FILE</a></li>
+	
+</ul>
+
+</div>
+{% endfor %}
+
+
+</div>
+
+
+
+
+{% endblock %}
+
